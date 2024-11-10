@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: monitoring
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+
+    scrape_configs:
+      - job_name: 'mikrotik'
+        static_configs:
+          - targets: ['182.163.114.42:9165']
+      
+      - job_name: 'cisco_switch'
+        static_configs:
+          - targets: ['192.168.2.12:9165']
+      
+      - job_name: 'wifi_router'
+        static_configs:
+          - targets: ['192.168.2.13:9165']
