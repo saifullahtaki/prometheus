@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - dev.prometheus.team
+        - dev.prometheus.local
       secretName: prometheus-tls  # Reference to the TLS secret created
   rules:
-    - host: dev.prometheus.team
+    - host: dev.prometheus.local
       http:
         paths:
           - path: /
