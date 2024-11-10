@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - dev.grafana.team
+        - dev.grafana.local
       secretName: grafana-tls  # Reference to the TLS secret created
   rules:
-    - host: dev.grafana.team
+    - host: dev.grafana.local
       http:
         paths:
           - path: /
